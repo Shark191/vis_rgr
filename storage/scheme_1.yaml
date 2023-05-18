@@ -1,0 +1,38 @@
+---
+name: Newyfddfdfd
+created: 1682292967
+modified: 1682292984
+items:
+	-
+		id: 0
+		pos: $p$173,227
+		size: $s$90,90
+	-
+		id: 0
+		pos: $p$362,313
+		size: $s$90,90
+	-
+		id: 5
+		pos: $p$143,410
+		size: $s$75,75
+		state: true
+joins:
+	-
+		- 0
+		- 2
+		- Out
+		- 1
+		- 0
+		- In
+	-
+		- 2
+		- 0
+		- Out
+		- 1
+		- 1
+		- In
+states:
+	- false
+	- false
+	- false
+	- true

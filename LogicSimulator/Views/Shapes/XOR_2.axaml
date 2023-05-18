@@ -1,0 +1,25 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" d:DesignWidth="{Binding UC_Width}" d:DesignHeight="{Binding UC_Height}"
+             Width="{Binding UC_Width}" Height="{Binding UC_Height}"
+			 x:Class="LogicSimulator.Views.Shapes.XOR_2"
+			 Tag="Gate">
+	
+	<Canvas Tag="Gate">
+		<Line Tag="Pin" StartPoint="{Binding PinPoints[0][0]}" EndPoint="{Binding PinPoints[0][1]}" Stroke="Gray" StrokeThickness="{Binding PinStrokeSize}"/>
+		<Line Tag="Pin" StartPoint="{Binding PinPoints[1][0]}" EndPoint="{Binding PinPoints[1][1]}" Stroke="Gray" StrokeThickness="{Binding PinStrokeSize}"/>
+		<Line Tag="Pin" StartPoint="{Binding PinPoints[2][0]}" EndPoint="{Binding PinPoints[2][1]}" Stroke="Gray" StrokeThickness="{Binding PinStrokeSize}"/>
+		<Border Tag="Body" Margin="{Binding BodyMargin}" Background="#08c" BorderThickness="{Binding BodyStrokeSize}" BorderBrush="#4cf" Width="{Binding BodyWidth}" Height="{Binding BodyHeight}" CornerRadius="{Binding BodyRadius}">
+			<Panel>
+				<TextBlock Tag="Body" FontSize="{Binding FontSizze}" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White">XOR</TextBlock>
+				<Image Tag="Resizer" Width="32" VerticalAlignment="Bottom" HorizontalAlignment="Right" Margin="{Binding ImageMargins[0]}" Height="32" Source="avares://LogicSimulator/Assets/Resizer.png"></Image>
+				<Image Tag="Deleter" Width="32" VerticalAlignment="Bottom" HorizontalAlignment="Left" Margin="{Binding ImageMargins[1]}" Height="32" Source="avares://LogicSimulator/Assets/Deleter.png"></Image>
+			</Panel>
+		</Border>
+		<Ellipse Tag="In" Margin="{Binding EllipseMargins[0]}" Width="{Binding EllipseSize}" Height="{Binding EllipseSize}" Stroke="Gray" StrokeThickness="{Binding EllipseStrokeSize}" Fill="#0000"/>
+		<Ellipse Tag="In" Margin="{Binding EllipseMargins[1]}" Width="{Binding EllipseSize}" Height="{Binding EllipseSize}" Stroke="Gray" StrokeThickness="{Binding EllipseStrokeSize}" Fill="#0000"/>
+		<Ellipse Tag="Out" Margin="{Binding EllipseMargins[2]}" Width="{Binding EllipseSize}" Height="{Binding EllipseSize}" Stroke="Gray" StrokeThickness="{Binding EllipseStrokeSize}" Fill="#0000"/>
+	</Canvas>
+</UserControl>
